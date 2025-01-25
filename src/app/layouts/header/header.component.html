@@ -1,0 +1,28 @@
+<header [ngClass]="{ 'scrolled': isScrolled }">
+    <div class="container">
+        <div class="menubar-wrap">
+
+            <div class="logo">
+                <img src="assets/images/logo.png" alt="Cladded Glass Logo" />
+            </div>
+
+            <p-menubar [model]="menuItems" [styleClass]="'topMenubar'">
+                <ng-template #item let-item let-root="root">
+                    <a
+                        pRipple
+                        [ngClass]="{ 'active': item.label === activeItem }"
+                        (click)="item.command()"
+                        class="p-menubar-item-link"
+                    >
+                        <span>{{ item.label }}</span>
+                    </a>
+                </ng-template>
+            </p-menubar>
+
+            <div class="contact-btn-wrap">
+                <button pButton type="button" label="Contact" class="theme-primary-btn"></button>
+            </div>
+
+        </div>
+    </div>
+</header>

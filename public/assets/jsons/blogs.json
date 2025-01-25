@@ -1,0 +1,56 @@
+[
+    {
+        "id": 1,
+        "image": "/assets/images/blog-img-1.png",
+        "title": "Cladded Glass Broadband",
+        "postBy": "@Cladded Glass Broadband",
+        "postAt": "12 months ago",
+        "description": "It’s been a busy few weeks, and some great progress on different expansion projects. Installing pipe under driveways and some serious breaker work on rock this week. #ruralfiber #gettingitdone",
+        "content": "It’s been a busy few weeks, and some great progress on different expansion projects. Installing pipe under driveways and some serious breaker work on rock this week. #ruralfiber #gettingitdone"
+    },
+    {
+        "id": 2,
+        "image": "/assets/images/blog-img-2.png",
+        "title": "Cladded Glass Broadband",
+        "postBy": "@Cladded Glass Broadband",
+        "postAt": "12 months ago",
+        "description": "Autumn days at the Alpe di Siusi 🍂🍄",
+        "content": "Autumn days at the Alpe di Siusi 🍂🍄"
+    },
+    {
+        "id": 3,
+        "image": "/assets/images/blog-img-3.png",
+        "title": "Cladded Glass Broadband",
+        "postBy": "@Cladded Glass Broadband",
+        "postAt": "12 months ago",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit, porta curabitur natoque.",
+        "content": "Lorem ipsum dolor sit amet consectetur adipiscing elit, porta curabitur natoque."
+    },
+    {
+        "id": 4,
+        "image": "/assets/images/blog-img-1.png",
+        "title": "Cladded Glass Broadband",
+        "postBy": "@Cladded Glass Broadband",
+        "postAt": "12 months ago",
+        "description": "It’s been a busy few weeks, and some great progress on different expansion projects. Installing pipe under driveways and some serious breaker work on rock this week. #ruralfiber #gettingitdone",
+        "content": "It’s been a busy few weeks, and some great progress on different expansion projects. Installing pipe under driveways and some serious breaker work on rock this week. #ruralfiber #gettingitdone"
+    },
+    {
+        "id": 5,
+        "image": "/assets/images/blog-img-2.png",
+        "title": "Cladded Glass Broadband",
+        "postBy": "@Cladded Glass Broadband",
+        "postAt": "12 months ago",
+        "description": "Autumn days at the Alpe di Siusi 🍂🍄",
+        "content": "Autumn days at the Alpe di Siusi 🍂🍄"
+    },
+    {
+        "id": 6,
+        "image": "/assets/images/blog-img-3.png",
+        "title": "Cladded Glass Broadband",
+        "postBy": "@Cladded Glass Broadband",
+        "postAt": "12 months ago",
+        "description": "Lorem ipsum dolor sit amet consectetur adipiscing elit, porta curabitur natoque.",
+        "content": "Lorem ipsum dolor sit amet consectetur adipiscing elit, porta curabitur natoque."
+    }
+]

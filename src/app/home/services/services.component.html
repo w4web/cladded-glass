@@ -1,0 +1,33 @@
+<div class="services-wrap">
+    <div class="container">
+
+        <div class="flex align-items-end justify-content-between mb-4 lg:mb-6">
+            <div>
+                <h2 class="mb-3">Discover Our Services <br>— Stay Connected</h2>
+                <p class="text-grey mb-0">Stay connected with reliable internet from Point Broadband.</p>
+            </div>
+            <div class="service-btn-wrap">
+                <button pButton type="button" label="Get Started Service" class="theme-primary-btn"></button>
+            </div>
+        </div>
+        
+
+        <div class="grid gutter-24">
+            <div class="col-12 md:col-6 lg:col-3" *ngFor="let service of services; let i = index">
+                <p-card styleClass="card-service">
+                    <ng-template #header>
+                        <img class="w-full" [src]="service.image" alt="Services" />
+                    </ng-template>
+                    <div class="service-icon">
+                        <img [src]="service.iconImage" alt="iconImage" />
+                    </div>
+                    <div class="card-service-content">
+                        <p class="text-white font-bold mb-2">{{service.title}}</p>
+                        <p class="text-white-3 fs-14">{{service.description}} <a href="" class="text-white-3 font-bold">Read more</a></p>
+                    </div>
+                </p-card>
+            </div>
+        </div>
+
+    </div>
+</div>

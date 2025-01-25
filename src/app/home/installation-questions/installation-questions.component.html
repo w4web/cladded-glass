@@ -1,0 +1,36 @@
+<div class="iq-wrap">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12 lg:col-4">
+                <h2 class="text-white mb-4">Installation Questions</h2>
+                <p class="text-white-3 mb-3 lg:mb-0">Stay connected with reliable internet <br>from Point Broadband.</p>
+            </div>
+            <div class="col-12 lg:col-8">
+                <div class="accordion-wrap">
+                    <p-accordion [value]="0">
+                        @for (que of installationQuestions; let i = $index; track que.question) {
+                            <p-accordion-panel [value]="i">
+                                <p-accordion-header>
+                                    <div class="flex align-items-start mr-2">
+                                        <span class="mr-4 lg:mr-3">{{i+1}}.</span>
+                                        <span>{{ que.question }}</span>
+                                    </div>
+                                    <ng-template #toggleicon let-active="active">
+                                        @if (active) {
+                                            <i class="pi pi-minus-circle" style="font-size: 24px;"></i>
+                                        } @else {
+                                            <i class="pi pi-plus-circle" style="font-size: 24px;"></i>
+                                        }
+                                    </ng-template>
+                                </p-accordion-header>
+                                <p-accordion-content>
+                                    <p class="m-0">{{ que.answer }}</p>
+                                </p-accordion-content>
+                            </p-accordion-panel>
+                        }
+                    </p-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

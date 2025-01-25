@@ -1,0 +1,47 @@
+<div class="subscribe-wrap">
+    <div class="container">
+
+        <p-card styleClass="card-subscribe">
+            <div class="grid">
+                <div class="col-12 lg:col-7 pb-0">
+                    <img class="subscription-bg" src="assets/images/subscription-bg.png" alt="subscription-bg" />
+                </div>
+                <div class="col-12 lg:col-5 pb-0">
+                    <p-card styleClass="card-subscribeForm">
+
+                        <h2 class="text-white mb-3">Subscribe Form</h2>
+
+                        <p class="fs-16 subscribeForm-text">Lorem ipsum dolor sit amet consectetur adipiscing elit est integer, dapibus vehicula duis taciti morbi</p>
+
+                        <form [formGroup]="subscribeForm" (ngSubmit)="onSubmit()">
+
+                            <div class="grid mb-3">
+                                <div class="col-12">
+                                    <input 
+                                        formControlName="email" 
+                                        pInputText 
+                                        type="email" 
+                                        pSize="large" 
+                                        class="w-full"
+                                        placeholder="Email Address" />
+                                    <p *ngIf="subscribeForm.get('email')?.invalid && subscribeForm.get('email')?.touched"
+                                        class="p-error">Valid Email is required.</p>
+                                </div>
+                            </div>
+
+                            <button 
+                                pButton 
+                                type="submit" 
+                                label="Submit"
+                                class="theme-white-btn w-full" 
+                                [disabled]="subscribeForm.invalid">
+                            </button>
+
+                        </form>
+                    </p-card>
+                </div>
+            </div>
+        </p-card>
+
+    </div>
+</div>

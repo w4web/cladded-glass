@@ -1,0 +1,126 @@
+<div class="contactInfo-wrap">
+    <div class="container">
+
+        <p-card styleClass="card-contactInfo">
+            <div class="grid">
+                <div class="col-12 lg:col-5 mb-4 lg:mb-0">
+                    <h3 class="font-semibold mb-3">Contact Info</h3>
+                    <p class="text-grey-2 mb-5">
+                        <span class="font-semibold mb-1 block">Need any help?</span>
+                        visit our office at california or make a call. We are available for 24/7 hours or send us a
+                        message.
+                    </p>
+                    <ul class="list-none m-0 p-0">
+                        @for (item of contactInfoItems; let i = $index; track item.id) {
+                        <li class="contactInfoItem mb-4">
+                            <div class="flex align-items-start">
+                                <span>
+                                    <i [class]="item.icon"></i>
+                                </span>
+                                <div class="pl-3">
+                                    <div class="font-semibold text-grey-3 mb-12px">{{ item.title }}</div>
+                                    @for (innerItem of item.items; track innerItem.id) {
+                                    <div class="text-grey-2 mb-12px">{{ innerItem.text }}</div>
+                                    }
+                                </div>
+                            </div>
+                        </li>
+                        }
+                    </ul>
+
+                    <div class="social-icons">
+                        <a class="icon-twitter" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="icon-youtube" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a class="icon-linkedin" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 lg:col-6 lg:col-offset-1">
+                    <p-card styleClass="card-contactForm">
+
+                        <h3 class="text-white font-semibold mb-3">Get A Quote</h3>
+
+                        <p class="fs-16 mb-4">Fill up the form and our Team will get back to <br>you within 24 hours.</p>
+
+                        <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+
+                            <div class="grid mb-3">
+                                <div class="col-12">
+                                    <input 
+                                        formControlName="name" 
+                                        pInputText type="text" 
+                                        pSize="large" 
+                                        class="w-full"
+                                        placeholder="Name" />
+                                    <p *ngIf="quoteForm.get('name')?.invalid && quoteForm.get('name')?.touched"
+                                        class="p-error">
+                                        Name is required.</p>
+                                </div>
+
+                                <div class="col-12">
+                                    <input 
+                                        formControlName="email" 
+                                        pInputText 
+                                        type="email" 
+                                        pSize="large" 
+                                        class="w-full"
+                                        placeholder="Email" />
+                                    <p *ngIf="quoteForm.get('email')?.invalid && quoteForm.get('email')?.touched"
+                                        class="p-error">Valid Email is required.</p>
+                                </div>
+
+                                <div class="col-12">
+                                    <input 
+                                        formControlName="subject" 
+                                        pInputText 
+                                        type="text" 
+                                        pSize="large" 
+                                        class="w-full"
+                                        placeholder="Subject" />
+                                    <p *ngIf="quoteForm.get('subject')?.invalid && quoteForm.get('subject')?.touched"
+                                        class="p-error">Subject is required.</p>
+                                </div>
+
+                                <div class="col-12">
+                                    <textarea 
+                                        formControlName="message" 
+                                        pTextarea 
+                                        rows="5" 
+                                        class="w-full"
+                                        placeholder="Your Message"></textarea>
+                                    <p *ngIf="quoteForm.get('message')?.invalid && quoteForm.get('message')?.touched"
+                                        class="p-error">Message is required.</p>
+                                </div>
+                            </div>
+
+                            <button 
+                                pButton 
+                                type="submit" 
+                                label="Send Message"
+                                class="theme-white-btn" 
+                                [disabled]="quoteForm.invalid">
+                            </button>
+
+                        </form>
+                    </p-card>
+                </div>
+            </div>
+        </p-card>
+
+    </div>
+
+    <div class="googleMap-container">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.9537353153168!3d-37.81627977975195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1b6c1b1a1b1!2sVictoria%20State%20Library!5e0!3m2!1sen!2sau!4v1614311234567!5m2!1sen!2sau" 
+            width="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </div>
+</div>

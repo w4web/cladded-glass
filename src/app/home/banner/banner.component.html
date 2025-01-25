@@ -1,0 +1,84 @@
+<div class="banner-wrap">
+  <div class="container">
+    <div class="grid">
+      <div class="col-12 lg:col-7 mb-4 lg:mb-0">
+        <div class="banner-content pr-0 lg:pr-6">
+          <h1 class="text-white mb-4">Interested in getting our <span class="text-blue">Fiber Broadband service?</span>
+          </h1>
+          <p class="fs-24 text-white-2">Want to try out our service? We've got you covered in the Purcellville South
+            area, from Rt 50 to Silcott Springs, and Snickersville North to town limits (Hamilton and Purcellville)...
+          </p>
+        </div>
+      </div>
+      <div class="col-12 lg:col-5">
+        <p-card styleClass="card-banner">
+
+          <h3 class="text-center mb-4">Get A Free Quote</h3>
+
+          <form [formGroup]="quoteForm" (ngSubmit)="onSubmit()">
+
+            <div class="grid">
+              <div class="col-12 md:col-6">
+                <input formControlName="firstName" pInputText type="text" pSize="large" class="w-full"
+                  placeholder="First Name" />
+                <p *ngIf="quoteForm.get('firstName')?.invalid && quoteForm.get('firstName')?.touched" class="p-error">
+                  First Name is required.</p>
+              </div>
+
+              <div class="col-12 md:col-6">
+                <input formControlName="lastName" pInputText type="text" pSize="large" class="w-full"
+                  placeholder="Last Name" />
+                <p *ngIf="quoteForm.get('lastName')?.invalid && quoteForm.get('lastName')?.touched" class="p-error">Last
+                  Name is required.</p>
+              </div>
+
+              <div class="col-12">
+                <p-select class="w-full" formControlName="address" [options]="cities" optionLabel="name"
+                  optionValue="code" size="large" placeholder="Select a City">
+                </p-select>
+                <p *ngIf="quoteForm.get('address')?.invalid && quoteForm.get('address')?.touched" class="p-error">
+                  Address is required.</p>
+              </div>
+
+              <div class="col-12">
+                <input formControlName="email" pInputText type="email" pSize="large" class="w-full"
+                  placeholder="Email" />
+                <p *ngIf="quoteForm.get('email')?.invalid && quoteForm.get('email')?.touched" class="p-error">Valid
+                  Email is required.</p>
+              </div>
+
+              <div class="col-12">
+                <input formControlName="phone" pInputText type="text" pSize="large" class="w-full"
+                  placeholder="Phone" />
+                <p *ngIf="quoteForm.get('phone')?.invalid && quoteForm.get('phone')?.touched" class="p-error">Valid
+                  Phone Number is required.</p>
+              </div>
+
+              <div class="col-12 mb-2">
+                <label class="fs-16 text-black-2 font-semibold mt-2 mb-3 block">Is your address EXCLUDED from the
+                  Loudoun County VATI Award?</label>
+                <div *ngFor="let option of vatOptions" class="field-checkbox">
+                  <p-radiobutton [inputId]="option.value" [value]="option.value" formControlName="vatExcluded" />
+                  <label [for]="option.value" class="fs-16 text-black-2 font-semibold ml-12px">{{ option.name }}</label>
+                </div>
+                <p *ngIf="quoteForm.get('vatExcluded')?.invalid && quoteForm.get('vatExcluded')?.touched"
+                  class="p-error">This field is required.</p>
+              </div>
+            </div>
+
+            <button pButton type="submit" label="Register your Interest" class="theme-primary-btn w-full mb-2"
+              [disabled]="quoteForm.invalid"></button>
+
+          </form>
+        </p-card>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="network-man-wrap">
+  <div class="container">
+    <img style="margin-left: 80px;" src="assets/images/network-man.png" alt="network man" />
+  </div>
+</div>

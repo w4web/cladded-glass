@@ -1,0 +1,73 @@
+<div class="footer-wrap">
+    <div class="container">
+        <div class="grid align-items-center">
+            <div class="col-12 lg:col-4">
+                <p-card styleClass="card-footer mb-3">
+                    <a routerLink="/">
+                        <img class="footer-logo mb-4" src="assets/images/logo-white.png" alt="footer-logo" />
+                    </a>
+                    <p class="font-semibold mb-5">Experience Speed and Reliability with Cladded Glass Fiber Solutions</p>
+                    <button pButton type="button" label="Request A Service" class="theme-darkBlue-btn radius100 font-semibold"></button>
+                </p-card>
+            </div>
+            <div class="col-12 lg:col-7 lg:col-offset-1">
+                <div class="grid">
+                    <div class="col-12 md:col-5">
+                        <h4 class="text-white">Company</h4>
+                        <ul class="list-none m-0 p-0">
+                            @for (item of footerInfo?.menu; let i = $index; track item.title) {
+                                <li class="fs-20 mb-3">
+                                  <a [routerLink]="item.link">{{item.title}}</a>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                    <div class="col-12 md:col-7">
+                        <h4 class="text-white">Contact Us</h4>
+                        <ul class="list-none m-0 p-0">
+                            <li class="fs-22 flex align-items-center mb-3">
+                                <span>
+                                    <img [src]="footerInfo?.contact?.phone?.icon" alt="contact icon" />
+                                </span>
+                                <span class="ml-4">{{footerInfo?.contact?.phone?.text}}</span>
+                            </li>
+                            <li class="fs-22 flex align-items-center mb-3">
+                                <span>
+                                    <img [src]="footerInfo?.contact?.email?.icon" alt="contact icon" />
+                                </span>
+                                <span class="ml-4">{{footerInfo?.contact?.email?.text}}</span>
+                            </li>
+                            <li class="fs-22 flex align-items-center mb-3">
+                                <span>
+                                    <img [src]="footerInfo?.contact?.address?.icon" alt="contact icon" />
+                                </span>
+                                <span class="ml-4">{{footerInfo?.contact?.address?.text}}</span>
+                            </li>
+                        </ul>
+                        <div class="footer-social-icons mt-5">
+                            @for (item of footerInfo?.social; let i = $index; track item.id) {
+                                <a [routerLink]="item.link">
+                                    <i [class]="item.icon"></i>
+                                </a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="copyright-wrap text-white">
+    <div class="container">
+        <div class="flex align-items-center justify-content-between">
+            <div class="">
+                © 2025 <b class="font-bold">Cladded Glass.</b> All rights reserved.
+            </div>
+            <div class="font-semibold">
+                <a href="" class="mr-6">Terms & Conditions</a>
+                <a href="">Privacy Policy</a>
+            </div>
+        </div>
+    </div>
+</div>

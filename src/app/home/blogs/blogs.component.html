@@ -1,0 +1,47 @@
+<div class="blogs-wrap">
+    <div class="container">
+
+        <div class="flex align-items-end justify-content-between mb-6">
+            <div>
+                <h5 class="text-black-2 mb-2">All In Package</h5>
+                <h2 class="mb-0">Explore Blog</h2>
+            </div>
+            <div>
+                
+            </div>
+        </div>
+
+        <div class="carousel-wrap blogs-carousel">
+            <owl-carousel-o [options]="customOptions">
+                <ng-container *ngFor="let blog of blogs">
+                  <ng-template carouselSlide [id]="blog.id">
+                    <p-card styleClass="card-blog">
+                        <ng-template #header>
+                            <img class="w-full" [src]="blog.image" [alt]="'blog image'" />
+                        </ng-template>
+                        <div class="flex align-items-center justify-content-between mb-3">
+                            <div class="flex align-items-center">
+                                <div>
+                                    <img class="" src="/assets/images/cb.png" [alt]="'blog image'" />
+                                </div>
+                                <div class="ml-2">
+                                    <div class="fs-16 font-semibold text-black-3 mb-1">{{blog.title}}</div>
+                                    <div class="text-grey fs-12">
+                                        <span>{{blog.postBy}}</span>
+                                        <span class="grey-dot"></span>
+                                        <span>{{blog.postAt}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <img class="" src="/assets/images/logos_google-icon.png" [alt]="'blog image'" />
+                            </div>
+                        </div>
+                        <div class="text-grey fs-14" style="min-height: 90px;">{{blog.description}}</div>
+                    </p-card>
+                  </ng-template>
+                </ng-container>
+            </owl-carousel-o>
+        </div>
+    </div>
+</div>

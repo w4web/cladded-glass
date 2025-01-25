@@ -1,0 +1,43 @@
+[
+    {
+        "id": 1,
+        "title": "Address",
+        "icon": "fas fa-map-marker-alt text-grey-2",
+        "items": [
+            {
+                "id": 1,
+                "text": "3317 Marietta Street, Santa Rosa, California"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Phone",
+        "icon": "fas fa-phone text-grey-2",
+        "items": [
+            {
+                "id": 1,
+                "text": "(+012) - 3456 7890"
+            },
+            {
+                "id": 2,
+                "text": "1802550 - 1102456"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Email",
+        "icon": "fas fa-envelope text-grey-2",
+        "items": [
+            {
+                "id": 1,
+                "text": "support@example.com"
+            },
+            {
+                "id": 2,
+                "text": "info@example.com"
+            }
+        ]
+    }
+]

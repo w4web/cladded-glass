@@ -1,0 +1,36 @@
+<div class="faq-wrap">
+    <div class="container">
+        <div class="grid">
+            <div class="col-12 lg:col-5 lg:pr-5 mb-4 lg:mb-0">
+                <h2 class="text-white mb-5">Frequently asked questions</h2>
+                <img class="faq-masked-img" src="assets/images/faq-img.png" alt="Masked Image" />
+            </div>
+            <div class="col-12 lg:col-7">
+                <div class="accordion-wrap">
+                    <p-accordion [value]="1">
+                        @for (que of faqs; let i = $index; track que.id) {
+                            <p-accordion-panel [value]="i">
+                                <p-accordion-header>
+                                    <div class="flex align-items-start mr-2">
+                                        <span class="mr-4 lg:mr-3">0{{i+1}}.</span>
+                                        <span>{{ que.question }}</span>
+                                    </div>
+                                    <ng-template #toggleicon let-active="active">
+                                        @if (active) {
+                                            <i class="pi pi-minus mt-2" style="font-size: 18px;"></i>
+                                        } @else {
+                                            <i class="pi pi-plus mt-2" style="font-size: 18px;"></i>
+                                        }
+                                    </ng-template>
+                                </p-accordion-header>
+                                <p-accordion-content>
+                                    <p class="m-0">{{ que.answer }}</p>
+                                </p-accordion-content>
+                            </p-accordion-panel>
+                        }
+                    </p-accordion>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

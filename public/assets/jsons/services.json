@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "title": "Satellite Dish Installation",
+        "description": "Stay connected with reliable internet from Point Broadband...",
+        "iconImage": "assets/images/icon-router.png",
+        "image": "assets/images/service1.jpg"
+    },
+    {
+        "id": 2,
+        "title": "Digital Aerial Installation",
+        "description": "Stay connected with reliable internet from Point Broadband...",
+        "iconImage": "assets/images/icon-repair.png",
+        "image": "assets/images/service2.jpg"
+    },
+    {
+        "id": 3,
+        "title": "European Satellite",
+        "description": "Stay connected with reliable internet from Point Broadband...",
+        "iconImage": "assets/images/icon-satellite.png",
+        "image": "assets/images/service3.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Tv Mounting",
+        "description": "Stay connected with reliable internet from Point Broadband...",
+        "iconImage": "assets/images/icon-television.png",
+        "image": "assets/images/service4.jpg"
+    }
+]

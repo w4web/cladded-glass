@@ -1,0 +1,64 @@
+{
+    "menu": [
+        {
+            "title": "Home",
+            "link": "/"
+        },
+        {
+            "title": "About",
+            "link": "/"
+        },
+        {
+            "title": "Services",
+            "link": "/"
+        },
+        {
+            "title": "Installation Questions",
+            "link": "/"
+        },
+        {
+            "title": "Plans & Pricing",
+            "link": "/"
+        },
+        {
+            "title": "FAQ",
+            "link": "/"
+        }
+    ],
+    "contact": {
+        "phone": {
+            "icon": "assets/images/contact-icon-1.png",
+            "text": "571.410.5811"
+        },
+        "email": {
+            "icon": "assets/images/contact-icon-2.png",
+            "text": "info@claddedglass.com"
+        },
+        "address": {
+            "icon": "assets/images/contact-icon-3.png",
+            "text": "North Fork, Purcellville, Virginia"
+        }
+    },
+    "social": [
+        {
+            "id": 1,
+            "icon": "fab fa-facebook-f",
+            "link": "/"
+        },
+        {
+            "id": 2,
+            "icon": "fab fa-twitter",
+            "link": "/"
+        },
+        {
+            "id": 3,
+            "icon": "fab fa-instagram",
+            "link": "/"
+        },
+        {
+            "id": 4,
+            "icon": "fab fa-youtube",
+            "link": "/"
+        }
+    ]
+}
