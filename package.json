@@ -7,9 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build:ssr": "ng build && ng run cladded-glass:server",
-    "serve:ssr": "node dist/cladded-glass/server/main.js",
-    "dev:ssr": "ng run cladded-glass:serve-ssr"
+    "serve:ssr:cladded-glass": "node dist/cladded-glass/server/server.mjs"
   },
   "private": true,
   "dependencies": {
